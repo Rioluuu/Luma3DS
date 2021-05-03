@@ -31,6 +31,8 @@
 #include "fmt.h"
 #include "utils.h"
 #include "ifile.h"
+#include "menus.h"
+#include "volume.h"
 
 Menu sysconfigMenu = {
     "System configuration menu",
@@ -40,6 +42,7 @@ Menu sysconfigMenu = {
         { "Toggle Wireless", METHOD, .method = &SysConfigMenu_ToggleWireless },
         { "Toggle Power Button", METHOD, .method=&SysConfigMenu_TogglePowerButton },
         { "Toggle power to card slot", METHOD, .method=&SysConfigMenu_ToggleCardIfPower},
+        { "Change Volume", METHOD, .method = &Volume_ControlVolume },
         {},
     }
 };
